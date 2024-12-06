@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ task|default:"Add" }} Task{% endblock %}
+
+{% block content %}
+<div class="task-form-container">
+    <h2>{% if task %}Edit Task{% else %}Add Task{% endif %}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" name="title" value="{{ task.title|default:'' }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea name="description" required>{{ task.description|default:'' }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Save</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

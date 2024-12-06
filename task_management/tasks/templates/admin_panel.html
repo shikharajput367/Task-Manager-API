@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+<h2>Admin Panel</h2>
+
+<!-- Google OAuth Key Form -->
+<h3>Manage Google OAuth Keys</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ google_oauth_key_form.as_p }}
+    <button type="submit" name="add_oauth_key">Add OAuth Key</button>
+</form>
+
+<!-- Invitation Form -->
+<h3>Send Invitation</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ invitation_form.as_p }}
+    <button type="submit" name="send_invite">Send Invitation</button>
+</form>
+
+<!-- List of OAuth Keys -->
+<h3>Existing OAuth Keys</h3>
+<ul>
+    {% for key in google_oauth_keys %}
+        <li>{{ key }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

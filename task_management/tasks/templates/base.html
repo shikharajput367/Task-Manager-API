@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Task Management{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Task Management App</h1>
+        <nav>
+            <ul>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'task_list' %}">Task List</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% if user.is_staff %}
+                        <!-- Admin panel link visible only for admin users -->
+                        <li><a href="{% url 'admin_panel' %}">Admin Panel</a></li>
+                    {% endif %}
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% if messages %}
+            <div class="messages">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Task Management App. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

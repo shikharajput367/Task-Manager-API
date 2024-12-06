@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Welcome to the Task Management App</h2>
+<p>Please log in to access your tasks.</p>
+{% load socialaccount %}
+<a href="{% provider_login_url 'google' %}?next={% url 'task_list' %}">Login with Google</a>
+{% endblock %}

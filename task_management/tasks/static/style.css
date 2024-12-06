@@ -1,0 +1,277 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Task List Page */
+.task-list-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.task-list-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.add-task-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.add-task-btn:hover {
+    background-color: #45a049;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-item a {
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+}
+
+.task-item a:hover {
+    text-decoration: underline;
+}
+
+.task-actions {
+    margin-top: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 5px 10px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    background-color: #ffa500;
+}
+
+.edit-btn:hover {
+    background-color: #e68900;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Task Form Page */
+.task-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-form-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Task Detail Page */
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Task Delete Page */
+form button[type="submit"] {
+    background-color: #f44336;
+    font-size: 1.2em;
+}
+
+form button[type="submit"]:hover {
+    background-color: #d32f2f;
+}
+
+form a {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+form a:hover {
+    background-color: #45a049;
+}
+
+/* Home Page */
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.social-login a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4285F4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.social-login a:hover {
+    background-color: #357ae8;
+}
+
+/* Hide unnecessary sections */
+.messages, .menu {
+    display: none;
+}
+
+/* Center the sign-in section */
+.sign-in-section {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the heading */
+.sign-in-section h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Style the text description */
+.sign-in-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Style the continue button */
+.sign-in-section button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-in-section button:hover {
+    background-color: #0056b3;
+}
